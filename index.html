@@ -5,18 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>My Dictionary</title>
+    <title>Dictionary</title>
 </head>
 <body>
-    <section>
-        <h3 class="heading"><a href="./index.html">Dictionary</a></h3>
-        <div class="search-area">
-            <input type="text" id="word" class="word" placeholder="Write a word...">
-            <input type="submit" id="search-btn" class="search-btn" value="Search">
+    <section class="main-section">
+        <form action="#" id="form">
+            <div class="search-box">
+                <input type="text" placeholder="Write a word..." id="input_text" class="input-text">
+                <button type="submit" id="search_btn" class="search-btn">Search</button>    
+            </div>
+        </form>
+
+        <div id="load_page" class="load-page">
+            <span>Search Meaning...</span>
         </div>
-        <p class="definition"></p>
-        <p class="not-found"></p>
-        <img src="./loading.gif" id="loading" alt="loading">
+
+        <div id="word_pronunciation" class="word-pronunciation">
+            <audio controls src="" id="audio_file"></audio>
+        </div>
+
+        <div id="result_box" class="result-box">
+            <h4 class="meaning">Meaning :</h4>
+            <p id="definition" class="definition"></p>
+            <br>
+            <h4 class="example">Example :</h4>
+            <p id="example_box" class="example-box"></p>
+        </div>
+
+        <div id="not_found_box" class="not-found-box">
+            <h6 class="result-not-found">Result not found</h6>
+            <span class="emoji">😌</span>
+        </div>
+
+        <img src="./loading.gif" alt="loading" id="loading" class="loading">
     </section>
 
     <script src="./script.js"></script>
